@@ -9,7 +9,11 @@
     <ul>
       {% for question in latest_question_list %}
       <li>
-        <a href="/polls/{{ question.id }}/">{{ question.question_text }}</a>
+        <a href="{% url 'detail' question.id %}"
+          >{{ question.question_text }}</a
+        >
+        <!-- this url template tag (% url 'name' 'param') gets called as path('<int:question_id>', views.detail, name='detail')-->
+        <!-- now we can adjust the path in polls/urls.py without worrying about mismatching here, because the name ('details' in this case) remains the same-->
       </li>
       {% endfor %}
     </ul>
