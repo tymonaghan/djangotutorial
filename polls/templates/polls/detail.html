@@ -9,6 +9,7 @@
     <p><b> {{ question.question_text }} </b></p>
     <ul>
       {% for choice in question.choice_set.all %}
+      <!-- question.choice_set.all is interpreted as the Python code question.choice_set.all(), which returns an iterable of Choice objects-->
       <li>{{ choice.choice_text }}</li>
       {% endfor %}
     </ul>
