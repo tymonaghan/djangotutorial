@@ -2,6 +2,8 @@ from django.urls import path
 
 from . import views
 
+app_name = 'polls'
+# namespacing as above allows multiple apps to avoid collisions
 urlpatterns = [
     # ex: /polls/ (because this is accessed from ../urls.py which contains the root polls/ route)
     # After finding the match at 'polls/', Django strips off the matching text ("polls/") and sends the remaining text – "34/" – to the ‘polls.urls’ URLconf for further processing: we are here
