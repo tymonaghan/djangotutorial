@@ -8,8 +8,11 @@ class Question(models.Model):
     question_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
     def __str__(self):
+      # the __str__ method provides a readable representation of this object
+      # It’s important to add __str__() methods to your models, not only for your own convenience when dealing with the interactive prompt, but also because objects’ representations are used throughout Django’s automatically-generated admin.
       return self.question_text
     def was_published_recently(self):
+      # this custom method uses the imported 'timezone' library to return how many days ago soemthing was published (i think)
       return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 
 
