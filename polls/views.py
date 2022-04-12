@@ -37,6 +37,7 @@ def vote(request, question_id):
     else: 
       selected_choice.votes +=1
       selected_choice.save()
+      # note this^ can result in a race condition if two users vote simultaneously
       #always return HttpResponseRedirect after dealing with POST data to avoid BACK button posting data 2x
       #  HttpResponseRedirect takes a single argument: the URL to which the user will be redirected
       return HttpResponseRedirect(reverse('polls:results',args=(question.id,)))
