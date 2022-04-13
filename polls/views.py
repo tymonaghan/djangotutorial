@@ -27,6 +27,13 @@ class DetailView(generic.DetailView):
     # By default, the DetailView generic view uses a template called <app name>/<model name>_detail.html
     # so normally it would look for polls/question_detail.html, but we'll use polls/detail.html instead since we already made that
     template_name = 'polls/detail.html'
+    
+    def get_queryset(self):
+      # this is a custom method that i guess overrides the default get_queryset behavior
+        """
+        excludes questions that aren't published yet so they can't be accessed by direct URL
+        """
+        return Question.objects.filter(pub_date__lte=timezone.now())
 
 
 class ResultsView(generic.DetailView):
