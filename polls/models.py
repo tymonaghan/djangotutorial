@@ -13,7 +13,8 @@ class Question(models.Model):
       return self.question_text
     def was_published_recently(self):
       # this custom method uses the imported 'timezone' library to return how many days ago soemthing was published (i think)
-      return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+      now = timezone.now()
+      return now - datetime.timedelta(days=1) <=  self.pub_date <= timezone.now() - datetime.timedelta(days=1)
 
 
 class Choice(models.Model):
