@@ -13,19 +13,20 @@
         {% if error_message %}
         <p>error! <b>{{error_message}}</b></p>
         {% endif %}
-        <div style="margin:10px">         
+        <div style="margin:10px">
           <input type="text" name="question_text" id="question_text"><label>Your question text</label></input>
         </div>
-          <div style="margin:10px">         
+          <div style="margin:10px">
           <input type="text" name="choice_text" id="choice_text_1"><label>Choice A</label></input>
         </div>
-        <div style="margin:10px">         
+        <div style="margin:10px">
           <input type="text" name="choice_text" id="choice_text_2"><label>Choice B</label></input>
         </div>
-        <div style="margin:10px">         
+        <div style="margin:10px">
           <input type="datetime-local" name="pub_date" id="pub_date"><label>publish date/time (US Central)</label></input>
         </div>
-            </fieldset>
+        <input type="submit" value="Submit">
+      </fieldset>
     </form>
   </div>
   </body>

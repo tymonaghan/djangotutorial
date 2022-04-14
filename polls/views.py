@@ -62,9 +62,9 @@ def vote(request, question_id):
       # reverse() takes the name of the view that we want to pass control to (polls:results)
       # so this would result in a path like /polls/:questionId/results/
       
-def new():
+def new(req):
   # this is called when user clicks "submit" on the add new poll form
-  return HttpResponseRedirect('.')
+  return HttpResponseRedirect('/polls/')
 
 def add_question(req):
   return render(req, 'polls/add-question.html')
