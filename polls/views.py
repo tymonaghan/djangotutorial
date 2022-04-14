@@ -64,7 +64,20 @@ def vote(request, question_id):
       
 def new(req):
   # this is called when user clicks "submit" on the add new poll form
-  return HttpResponseRedirect('/polls/')
+  try:
+    text = req.POST['question_text']
+    dt = req.POST['pub_date']
+    newQuestion = Question(question_text=text,pub_date=timezone.now())
+    newQuestion.save()
+    choiceOne = Choice(question=newQuestion, choice_text=req.POST['choice_one_text'])
+    choiceTwo = Choice(question=newQuestion, choice_text=req.POST['choice_two_text'])
+    choiceOne.save()
+    choiceTwo.save()
+  except(KeyError):
+    return render(req, 'polls/add=question.html',{'error_message':"something went wrong"})
+  else:
+    print(req)
+    return HttpResponseRedirect('/polls/')
 
 def add_question(req):
   return render(req, 'polls/add-question.html')
