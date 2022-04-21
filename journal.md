@@ -12,3 +12,12 @@ I am going to add this file as a journal to add notes as I make commits. This sh
 - so we can just use `"{% static 'polls/style.css' %}"` as the href for the styleshet
 
 that's it! Links are now green on the index.html page. I wonder if there is a way to apply that style site-wide. 
+
+### static images
+- made a new folder:  /polls/static/polls/images, and put an image inside
+- add `
+body {
+    background: white url("images/holodeck.jpg") no-repeat;
+}
+`
+ to stylesheet. So, you can just use a relative path from the stylesheet file.
