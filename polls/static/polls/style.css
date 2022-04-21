@@ -3,5 +3,10 @@ li a {
 }
 
 body {
-    background: white url("images/holodeck.jpg") no-repeat;
-}
+    background:
+    no-repeat  url("images/holodeck.jpg") 5% 5%,
+    gray;
+} 
+/* body {
+    
+} */

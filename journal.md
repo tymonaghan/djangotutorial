@@ -22,3 +22,5 @@ body {
 `
  to stylesheet. So, you can just use a relative path from the stylesheet file. (oh yeah actually, the docs have a note, 
  > You should always use relative paths to link your static files between each other, because then you can change STATIC_URL (used by the static template tag to generate its URLs) without having to modify a bunch of paths in your static files as well.)
+
+ I'm continuing to play around with the background - it seems like I should be able to add a layer of semi-transparent color (or white) to "fade" the background image (I've manually pre-processed the image first in the past, this would be better) but it's not working so I'm leaving it alone for now -- just lightening the image and ignoring the margins! 
