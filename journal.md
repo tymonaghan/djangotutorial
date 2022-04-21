@@ -20,4 +20,5 @@ body {
     background: white url("images/holodeck.jpg") no-repeat;
 }
 `
- to stylesheet. So, you can just use a relative path from the stylesheet file.
+ to stylesheet. So, you can just use a relative path from the stylesheet file. (oh yeah actually, the docs have a note, 
+ > You should always use relative paths to link your static files between each other, because then you can change STATIC_URL (used by the static template tag to generate its URLs) without having to modify a bunch of paths in your static files as well.)
