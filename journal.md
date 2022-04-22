@@ -30,3 +30,6 @@ body {
 
  - for this commit, all I've done is make "Publication Date" come before "Question" field. Not a big deal here, but important for forms with a lot of fields.
  - in this commit, I split the question items into 'fieldsets', note how the first element of each touple in `fieldsets` gets a header with that name on the admin page.
+
+ ## .pyc files
+ real quick, on my own, I'm removing and ignoring .pyc files from the git repo. It's a little weird that they weren't auto-ignored by Django, so I'll keep an eye out for adverse effects, but it just seems like it can't be right to keep committing these files I'm never touching. 
