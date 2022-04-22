@@ -24,3 +24,8 @@ body {
  > You should always use relative paths to link your static files between each other, because then you can change STATIC_URL (used by the static template tag to generate its URLs) without having to modify a bunch of paths in your static files as well.)
 
  I'm continuing to play around with the background - it seems like I should be able to add a layer of semi-transparent color (or white) to "fade" the background image (I've manually pre-processed the image first in the past, this would be better) but it's not working so I'm leaving it alone for now -- just lightening the image and ignoring the margins! 
+
+ ## updating the admin site
+ today we're updating the Admin site/form that Django automatically generates for us and is currently at [localhost:8000/admin](http://localhost:8000/admin).
+
+ - for this commit, all I've done is make "Publication Date" come before "Question" field. Not a big deal here, but important for forms with a lot of fields.
