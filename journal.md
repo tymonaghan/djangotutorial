@@ -41,3 +41,6 @@ body {
  This commit has the newer, better method, where we can include the Choice options "inline" in the same form as the Questions! Yeah, this is dope.
 
  In this commit I switched from `StackedInline` to `TabularInline` for the ChoiceInline class. This takes up way less screen space and looks slick. 
+
+ ## Questions List admin page
+ By default, Django displays the str() of each object. But sometimes it’d be more helpful if we could display individual fields. To do that, use the list_display admin option, which is a tuple of field names to display, as columns, on the change list page for the object... In this commit, I just added the `list_display` property to QuestionAdmin, which makes the publication date now appear. 
