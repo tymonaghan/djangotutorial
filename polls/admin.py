@@ -3,7 +3,8 @@ from .models import Question, Choice
 
 # Register your models here.
 
-class ChoiceInline(admin.StackedInline):
+#note the change to TabularInline (vs StackedInline)
+class ChoiceInline(admin.TabularInline):
     model = Choice
     extra = 3
     # This tells Django: “Choice objects are edited on the Question admin page. By default, provide enough fields for 3 choices.”
