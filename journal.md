@@ -50,3 +50,5 @@ This certainly works. The column header for was_published_recently is, by defaul
 We're gonna improve that by using the `display()` decorator on that method (in polls/models.py). In this commit, we change the "was published recently" heading to "Published Recently?" and we output the actual boolean as ✅/❌ icons which is nice. 
 
 Wow, this is a cool one, we added a filter based on the pub_date. I guess it knows it's a date and automatically allows filtering by 1/7/30 days, etc.
+
+Another cool one, we added a search bar based on the question text with one line of code.

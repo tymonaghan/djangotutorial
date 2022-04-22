@@ -19,6 +19,7 @@ class QuestionAdmin(admin.ModelAdmin):
     list_display = ('question_text', 'pub_date', 'was_published_recently')
     #list_display controls, ya know, how the list displays... was_published_recently is our custom method on the Question model
     list_filter = ["pub_date"]
+    search_fields = ["question_text"]
 
 admin.site.register(Question, QuestionAdmin)
 # create a model admin class, then pass it as the second argument to admin.site.register() – any time you need to change the admin options for a model.
