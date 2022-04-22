@@ -61,4 +61,7 @@ then
 - copy the `base_site.html` template from django source code into that admin folder
 - update that template to replace the {{}} with my own site name
 
-that's it! Kind of convoluted to access that template and copy it over but once it's in place, it's easy.   
+that's it! Kind of convoluted to access that template and copy it over but once it's in place, it's easy.   Unhelpfully, the docs then say: 
+> We use this approach to teach you how to override templates. In an actual project, you would probably use the django.contrib.admin.AdminSite.site_header attribute to more easily make this particular customization.
+
+but I don't really know how to set that site_header attribute. Oh well, this works! [Here's a link to where we are in the docs at this point](https://docs.djangoproject.com/en/4.0/intro/tutorial07/#customizing-your-application-s-templates)
