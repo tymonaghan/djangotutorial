@@ -1,5 +1,7 @@
 import datetime
 
+from django.contrib import admin
+
 from django.db import models
 from django.utils import timezone
 
@@ -11,6 +13,11 @@ class Question(models.Model):
       # the __str__ method provides a readable representation of this object
       # It’s important to add __str__() methods to your models, not only for your own convenience when dealing with the interactive prompt, but also because objects’ representations are used throughout Django’s automatically-generated admin.
       return self.question_text
+    @admin.display(
+      boolean=True,
+      ordering='pub_date',
+      description='Published recently?',
+    )
     def was_published_recently(self):
       # this custom method uses the imported 'timezone' library to return how many days ago soemthing was published (i think)
       now = timezone.now()

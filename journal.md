@@ -44,3 +44,7 @@ body {
 
  ## Questions List admin page
  By default, Django displays the str() of each object. But sometimes it’d be more helpful if we could display individual fields. To do that, use the list_display admin option, which is a tuple of field names to display, as columns, on the change list page for the object... In this commit, I just added the `list_display` property to QuestionAdmin, which makes the publication date now appear. 
+
+This certainly works. The column header for was_published_recently is, by default, the name of the method (with underscores replaced with spaces). Each line contains the string representation of the output.
+
+We're gonna improve that by using the `display()` decorator on that method (in polls/models.py). In this commit, we change the "was published recently" heading to "Published Recently?" and we output the actual boolean as ✅/❌ icons which is nice. 
