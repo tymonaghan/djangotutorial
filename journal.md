@@ -33,3 +33,6 @@ body {
 
  ## .pyc files
  real quick, on my own, I'm removing and ignoring .pyc files from the git repo. It's a little weird that they weren't auto-ignored by Django, so I'll keep an eye out for adverse effects, but it just seems like it can't be right to keep committing these files I'm never touching. 
+
+ ### adding the ability to edit Choices
+ this commit contains a naive way to do this, which is just registering our Choice model directly in the admin. At the commit, you can go in and edit Choices just like questions. Note how the foreign-key connection is picked up by the Choices form, we get a dropdown to select the matching question "for free."
