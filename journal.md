@@ -36,3 +36,6 @@ body {
 
  ### adding the ability to edit Choices
  this commit contains a naive way to do this, which is just registering our Choice model directly in the admin. At the commit, you can go in and edit Choices just like questions. Note how the foreign-key connection is picked up by the Choices form, we get a dropdown to select the matching question "for free."
+ Actually, this is cooler than I realized - it not only has the ability to assign an existing question but it automatically includes the ability to add a NEW question through the admin page via a pop-up. Cool. 
+
+ This commit has the newer, better method, where we can include the Choice options "inline" in the same form as the Questions! Yeah, this is dope.
