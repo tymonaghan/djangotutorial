@@ -29,3 +29,4 @@ body {
  today we're updating the Admin site/form that Django automatically generates for us and is currently at [localhost:8000/admin](http://localhost:8000/admin).
 
  - for this commit, all I've done is make "Publication Date" come before "Question" field. Not a big deal here, but important for forms with a lot of fields.
+ - in this commit, I split the question items into 'fieldsets', note how the first element of each touple in `fieldsets` gets a header with that name on the admin page.
