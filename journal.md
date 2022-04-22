@@ -52,3 +52,13 @@ We're gonna improve that by using the `display()` decorator on that method (in p
 Wow, this is a cool one, we added a filter based on the pub_date. I guess it knows it's a date and automatically allows filtering by 1/7/30 days, etc.
 
 Another cool one, we added a search bar based on the question text with one line of code.
+
+## customizing admin l&f
+added a "templates" directory (but these are *project* templates) and then added a path to that directory as `DIR` in settings.py.
+
+then 
+- create a directory called "admin" in that templates folder
+- copy the `base_site.html` template from django source code into that admin folder
+- update that template to replace the {{}} with my own site name
+
+that's it! Kind of convoluted to access that template and copy it over but once it's in place, it's easy.   
